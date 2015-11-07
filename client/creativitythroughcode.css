@@ -1,0 +1,62 @@
+/* CSS declarations go here */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.intro {
+    background-image: url('http://res.freestockphotos.biz/pictures/9/9090-an-abstract-blue-background-pv.jpg');
+    height: 50vh;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    
+}
+
+.introclass {
+    padding-top: 0%;
+}
+
+.introhead {
+    font-weight: 500
+}
+
+.img {
+    border-radius: 80px;
+}
+
+.featurea {
+    width: 32%;
+    float: left;
+}
+
+.featureb {
+    width: 32%;
+    display: inline-block;
+}
+
+.featurec {
+    width: 32%;
+    float: right;
+}
