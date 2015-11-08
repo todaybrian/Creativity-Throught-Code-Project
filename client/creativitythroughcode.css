@@ -60,3 +60,38 @@ body {
     width: 32%;
     float: right;
 }
+
+nav{
+    min-height: 50px;
+    background-color: deepskyblue;
+}
+nav div{
+    padding-top: 5px;
+}
+nav a{
+    color: white;
+}
+nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+nav a h4 {
+    opacity: 0.7;
+    font-size: 16px;
+}
+nav a h4:hover{
+    opacity: 1;
+}
+footer ul li{
+    list-style: none;
+}
+footer{
+   background-color: lawngreen;
+    min-height: 80px;
+    margin-top: 40px;
+}
+
+.contact-form-footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
