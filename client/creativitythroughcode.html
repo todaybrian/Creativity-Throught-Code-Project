@@ -22,8 +22,8 @@
             <img src = "http://media.giphy.com/media/V25gdutt6iuWc/giphy.gif" height="100px" class = "img">
             <div class="introclass">
                 
-                <h1 class="introhead"><b>Welcome to B13i5n's website!</b></h1>
-                <p>He <span class="element"></span></p>
+                <h1 class="introhead wow zoomInLeft"><b>Welcome to B13i5n's website!</b></h1>
+                <p class="wow rollIn">He <span class="element"></span></p>
             </div>
             
         </header>  
@@ -31,17 +31,17 @@
             <div class="container">
             
             <h1>Here our the websites features</h1>
-            <div class="col-md-4">
+            <div class="col-md-4 wow zoomIn">
                 
                 <h3>Search</h3>
                 <p>Find what you want to know on our search bar!</p>
             </div>
     
-            <div class="col-md-4">
+            <div class="col-md-4 wow lightSpeedIn">
                 <h3>Contact Us</h3>
                 <p>Want to Contact us? Here is the <a href="/contact">link</a>.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 wow flipInY">
                 <h3>Accounts</h3>
                 <p>To create a account, it is for free! </p>
                 {{> loginButtons}}
@@ -57,7 +57,7 @@
   $(function(){
       $(".element").typed({
         
-        strings: ["is a coder.", "is awesome!", "is a maker of todaybrian.com.", "knows alot of html and is still learning.", "knows alot of css and is still learning.", "knows little js and is still learning.", "knows alot php and mysql.", "knows alot of python and is still learning.", " is great!"],
+        strings: ["is a coder.", "is awesome!", "is a maker of todaybrian.com.", "knows alot of html and is still learning.", "knows alot of css and is still learning.", "knows little js and is still learning.", "knows alot php and mysql.", "knows alot of python and is still learning.", " is great!", "is very very very awesome!!! He is also very very great!!!"],
         loop: true,   
         typeSpeed: 100
       });
@@ -66,18 +66,17 @@
 </template>
 <template name="contact">
     {{> nav_bar}}
-    <div class="col-md-12">
+    <div class="row">
     <div class="col-md-3">
         <h3>Contact Us!</h3>
         {{> contact_form}}
-    
     </div>
     </div>
    {{> footer}}
 </template>
 
 <template name="contact_form">
-    <form action='https://www.getform.org/f/e8485997-b71e-4fb1-8327-69b8e4b1d171' method="POST">
+    <form action='https://www.getform.org/f/e8485997-b71e-4fb1-8327-69b8e4b1d171' method="POST" class="wow bounceIn">
             <input type="text" class="form-control" placeholder="Name" name="name">
             <input type="email" class="form-control" placeholder="Email" name="email">
             <textarea class="form-control" placeholder="Message" name="message"></textarea>
@@ -87,19 +86,19 @@
 
 <template name="gallery">
     {{> nav_bar}}
-    Hello
+    <p class="wow zoomInUp">Hello</p>
     {{> footer}}
 </template>
 <template name="nav_bar">
     <nav>
-        <div class="col-md-1 col-md-offset-8">
-            <a href="/"><h4>Home</h4></a>
+        <div class="col-md-1 col-md-offset-8 col-xs-4">
+            <a href="/"><h4 class="wow slideInLeft">Home</h4></a>
         </div>
-        <div class="col-md-1">
-            <a href="/gallery"><h4>Gallery</h4></a>
+        <div class="col-md-1 col-xs-4">
+            <a href="/gallery"><h4 class="wow zoomIn">Gallery</h4></a>
         </div>
-        <div class="col-md-2">
-            <a href="/contact"><h4>Contact Us</h4></a>
+        <div class="col-md-2 col-xs-4">
+            <a href="/contact"><h4 class="wow rotateInDownRight">Contact Us</h4></a>
         </div>
     </nav>
 </template>
@@ -109,19 +108,20 @@
             <div class="col-md-4">
                 <div class="container">
                     <ul>
-                        <a href="/"><li>Home</li></a>
-                        <a href="/gallery"><li>Gallery</li></a>
-                        <a href="/contact"><li>Contact Us</li></a>
+                        <a href="/"><li class="wow bounceInRight">Home</li></a>
+                        <a href="/gallery"><li class="wow bounceInLeft">Gallery</li></a>
+                        <a href="/contact"><li class="wow bounceInRight">Contact Us</li></a>
+                        <a href="http://www.todaybrian.com"><li>Todaybrian</li></a>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
-                <h4>About Us</h4>
-                <p>This is B13i5n's (Brian)website He is a coder and knows alot of proggraming.</p>
+                <h4 class="wow slideInLeft">About Us</h4>
+                <p class="wow flipInX">This is B13i5n's (Brian) website He is a coder and knows alot of proggraming. He has created the website todaybrian.</p>
             </div>
             <div class="col-md-4">
                 <div class="row">
-                    <h4>Contact Us</h4>
+                    <h4 class="wow flipInY">Contact Us</h4>
                     <div class="col-md-8 contact-form-footer">
                         {{> contact_form}}
                     </div>

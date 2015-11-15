@@ -11,4 +11,4 @@ Router.route('/contact', {
 Router.route('/gallery', {
     template: 'gallery',
     title: 'B13i5n website - gallery'
-})
+});
