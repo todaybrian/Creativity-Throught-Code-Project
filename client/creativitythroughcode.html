@@ -14,6 +14,38 @@
 
 
 <template name="about">
+    <script type="text/javascript">
+        var yay = function(a, b) {
+            return a + b;
+        }
+        var functione = function() {
+            return "My first function";
+        }
+        console.log(functione())
+        yay(234234, 23432432);
+        console.log("Hello World");
+        var x = 22/7;
+        var y = 3;
+        if (x === 22/7) {
+            console.log("You compyied my answer");
+        } else if(y == 3) {
+            console.log("STOP IT NO COMPzzzy ANWERfsjghsdfjghsfkdgdl");
+        } else {
+            console.log("ertertretretretertret");
+        }
+        var cnt = 0;
+        while(cnt < 20) {
+            cnt = cnt + 1;
+            console.log(cnt);
+        }
+        for (var i = 0, j = 0; i < 20; i++, j++){
+            console.log(j+i);
+        }
+        var str = [1, 2, true, false, "lol" ]
+        for (var inex = 0; inex < str.length; inex ++) {
+            console.log(str)
+        }
+    </script>
     {{> nav_bar}}
   <body>
       
@@ -86,8 +118,37 @@
 
 <template name="gallery">
     {{> nav_bar}}
-    <p class="wow zoomInUp">Hello</p>
-    {{> footer}}
+    <div id="row">
+        <div id="container">
+            {{#each awesome}}]
+                <img src="http://www.picgifs.com/graphics/r/rubiks-cube/animaatjes-rubiks-cube-7217468.gif" height="200px" class="wow zoomIn">
+            <p class= "wow flipInX"><b>{{name}}</b></p>
+                <p class="wow flipInY">{{hello}}</p>
+            {{/each}}
+            {{> footer}}
+        </div>
+    </div>
+    
+</template>
+<template name= "cc">
+{{> nav_bar}}
+<script type="text/javascript">
+var ctous = 0.75;
+var utoc = 1.33;
+var exchangee = [ctous, utoc] 
+function exchange(a, cur){
+    return a * exchangee[cur];
+}
+</script>
+    <form>
+        <input type="text" class= "form-control" placeholder="Principle">
+        <select class="form-control">
+            <option>cad to usd</option>
+            <option>usd to cad</option>
+        </select>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+{{> footer}}
 </template>
 <template name="nav_bar">
     <nav>

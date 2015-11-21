@@ -12,3 +12,7 @@ Router.route('/gallery', {
     template: 'gallery',
     title: 'B13i5n website - gallery'
 });
+Router.route('/cc', {
+    template: 'cc',
+    title: 'B13i5n website - CC'
+});
