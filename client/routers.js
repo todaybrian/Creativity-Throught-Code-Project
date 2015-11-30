@@ -20,3 +20,10 @@ Router.route('/math',{
     template: 'math',
     title: 'B13i5n website - math'
 });
+Router.route('/login',{
+    template: 'login',
+    
+    
+    
+    title:'B13i5n website - login'
+});

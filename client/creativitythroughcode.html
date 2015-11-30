@@ -76,7 +76,7 @@
             <div class="col-md-4 col-xs-12 wow flipInY">
                 <h3>Accounts</h3>
                 <p>To create a account, it is for free! </p>
-                {{> loginButtons}}
+                
             </div>
         </div>
       </div>
@@ -153,6 +153,22 @@ function exchange(a, cur){
 </template>
 <template name="math">
     {{> nav_bar}}
+    {{> footer}}
+</template>
+<template name="login">
+    {{> nav_bar}}
+    <div class="row">
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3 loginPanel">
+
+
+                    <div class="col-md-offset-4 col-md-4" style="padding:30px 0px 30px 0px;">
+                            {{> loginButtons}}
+                    </div>
+
+            </div>
+        </div>
+    </div>
     {{> footer}}
 </template>
 <template name="nav_bar">

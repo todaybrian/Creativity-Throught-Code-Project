@@ -1,12 +1,14 @@
 Awesome = new Meteor.Collection('awesome');
 
 if (Meteor.isClient) {
+    
     Session.setDefault('exchangedPrinciple', 0);
     Session.setDefault('finalCurrency', 0);
     
     Session.setDefault('val1', 0);
     Session.setDefault('val2', 0);
     Session.setDefault('score', 0);
+    Session.setDefault();
     Template.about.rendered = new WOW().init();
     
     Template.cc.events({
@@ -15,7 +17,7 @@ if (Meteor.isClient) {
             //Exchange rates
             var ctous = 0.75;
             var utoc = 1.33;
-            var exchangee = [ctous, utoc]
+            var exchangee = [ctous, utoc];
             
             //Get values from form.
             var principleValue = event.target.principle.value;

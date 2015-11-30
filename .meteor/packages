@@ -18,7 +18,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
-accounts-ui
 accounts-password
 percolate:momentum
 chrisbutler:typed.js
@@ -28,3 +27,5 @@ iron:router
 codefights:blaze-material-ui
 flyandi:reactive-countdown
 timmyg:wow
+accounts-ui-unstyled
+jamielob:accounts-ui-no-dropdown

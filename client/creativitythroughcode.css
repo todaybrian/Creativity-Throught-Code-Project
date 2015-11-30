@@ -95,3 +95,49 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.loginPanel{
+    border-style:solid;
+    border-color: black;
+    border-width: 1px;
+    border-bottom-width: 3px;
+    border-radius: 10px;
+}
+@media screen(min-width: 700px){
+    .loginPanel{
+        margin-top: 100px;
+    }
+}
+#login-email-label, #login-password-label{
+    font-family: 'open-sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+#login-email-label{
+    margin-left: 33%;
+}
+#login-password-label{
+    margin-left: 24%;
+}
+#login-password, #login-email{
+    padding: 8px 0px 8px 0px;
+    border-radius: 6px;
+    border-width: 1px;
+}
+.login-button{
+    color: black;
+    background-color: #3366ff;
+    line-height: 2;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: #003cec;
+}
+.login-button:hover{
+    color: black;
+    background-color: #003cec;
+    line-height: 2;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: #0037dd;
+}
