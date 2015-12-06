@@ -54,4 +54,9 @@ if (Meteor.isClient) {
             return Awesome.find();
         }
     });
+    Template.javascript.helpers({
+        printname:function(name){
+            return String(name);
+        }
+    });
 }

@@ -13,8 +13,14 @@ Router.route('/gallery', {
     title: 'B13i5n website - gallery'
 });
 Router.route('/cc', {
-    template: 'cc',
-    title: 'B13i5n website - CC'
+    onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.render('cc');
+        } else{
+            this.render('login');
+        }
+    }
 });
 Router.route('/math',{
     template: 'math',
@@ -22,8 +28,9 @@ Router.route('/math',{
 });
 Router.route('/login',{
     template: 'login',
-    
-    
-    
     title:'B13i5n website - login'
+});
+Router.route('/javascript',{
+    template: 'javascript',
+    title:'B13i5n website - javascript'
 });
