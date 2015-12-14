@@ -148,6 +148,7 @@ function exchange(a, cur){
     <button type="submit" class="btn btn-default">Submit</button>
     </form>
     <p>Here you go: {{returnExchanged}}</p>
+    {{> comments}}
 {{> footer}}
 </template>
 <template name="math">
@@ -169,6 +170,24 @@ function exchange(a, cur){
         </div>
     </div>
     {{> footer}}
+</template>
+<template name='comments'>
+    <p>Comment are below.</p>
+    {{#each comments}}
+    <div id="comment">
+    
+        <h4 id="comment" style="{{colorofcomment}}">
+            {{postedcomment}}</h4>
+        <p>{{datesubmitted}}</p>
+        </div>
+    {{/each}}
+    <form class='new-comment'>
+        <input type="text" name="comment" placeholder="Comment">
+        <input type="text" name="colorselected" placeholder="Select color for your comment">
+        <input type="text" name="size" placeholder="fontsize">
+        <button type="Submit" id="submitcomment">Submit</button>
+        <button id="deletecomment">Delete comment</button>
+    </form>
 </template>
 <template name="nav_bar">
     <nav>
