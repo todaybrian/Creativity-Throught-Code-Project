@@ -1,7 +1,7 @@
 <head>
   <title>creativitythroughcode</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-   
+
 </head>
 
 
@@ -44,30 +44,31 @@
         for (var inex = 0; inex < str.length; inex ++) {
             console.log(str)
         }
+        console.log(Meteor.user());
     </script>
     {{> nav_bar}}
   <body>
-      
+
         <header class="intro">
-            
+
             <img src = "http://media.giphy.com/media/V25gdutt6iuWc/giphy.gif" height="100px" class = "img">
             <div class="introclass">
-                
+
                 <h1 class="introhead wow zoomInLeft"><b>Welcome to B13i5n's website!</b></h1>
                 <p class="wow rollIn">He <span class="element"></span></p>
             </div>
-            
-        </header>  
+
+        </header>
         <div>
             <div class="container">
-            
+
             <h1>Here our the websites features</h1>
             <div class="col-md-4 col-xs-4 wow zoomIn">
-                
+
                 <h3>Search</h3>
                 <p>Find what you want to know on our search bar!</p>
             </div>
-    
+
             <div class="col-md-4 col-xs-12 wow lightSpeedIn">
                 <h3>Contact Us</h3>
                 <p>Want to Contact us? Here is the <a href="/contact">link</a>.</p>
@@ -75,7 +76,7 @@
             <div class="col-md-4 col-xs-12 wow flipInY">
                 <h3>Accounts</h3>
                 <p>To create a account, it is for free! </p>
-                
+
             </div>
         </div>
       </div>
@@ -87,9 +88,9 @@
 <script>
   $(function(){
       $(".element").typed({
-        
+
         strings: ["is a coder.", "is awesome!", "is a maker of todaybrian.com.", "knows alot of html and is still learning.", "knows alot of css and is still learning.", "knows little js and is still learning.", "knows alot php and mysql.", "knows alot of python and is still learning.", " is great!", "is very very very awesome!!! He is also very very great!!!"],
-        loop: true,   
+        loop: true,
         typeSpeed: 100
       });
   });
@@ -127,14 +128,14 @@
             {{> footer}}
         </div>
     </div>
-    
+
 </template>
 <template name="cc">
 {{> nav_bar}}
 <script type="text/javascript">
 var ctous = 0.75;
 var utoc = 1.33;
-var exchangee = [ctous, utoc] 
+var exchangee = [ctous, utoc]
 function exchange(a, cur){
     return a * exchangee[cur];
 }
@@ -174,12 +175,13 @@ function exchange(a, cur){
 <template name='comments'>
     <p>Comment are below.</p>
     {{#each comments}}
-    <div id="comment">
-    
+        <div id="comment">
+
         <h4 id="comment" style="{{colorofcomment}}">
             {{postedcomment}}</h4>
-        <p>{{datesubmitted}}</p>
+        <p>By {{user}} at {{datesubmitted}}</p>
         </div>
+    <hr>
     {{/each}}
     <form class='new-comment'>
         <input type="text" name="comment" placeholder="Comment">
@@ -212,6 +214,8 @@ function exchange(a, cur){
                         <a href="/gallery"><li class="wow bounceInLeft">Gallery</li></a>
                         <a href="/contact"><li class="wow bounceInRight">Contact Us</li></a>
                         <a href="http://www.todaybrian.com"><li class="wow bounceInLeft">Todaybrian</li></a>
+                        <a href="/cc"><li class="wow bounceInRight">Currency Converter</li></a>
+                        <a href="/login"><li class="wow bounceInLeft">Login</li></a>
                     </ul>
                 </div>
             </div>
