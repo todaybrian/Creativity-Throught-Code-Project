@@ -1,4 +1,7 @@
 /* CSS declarations go here */
+template {
+    font-family: 'open-sans';
+}
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0

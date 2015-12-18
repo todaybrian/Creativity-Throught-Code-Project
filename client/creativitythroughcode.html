@@ -183,12 +183,14 @@ function exchange(a, cur){
         </div>
     <hr>
     {{/each}}
+    <h4>Create a comment</h4>
     <form class='new-comment'>
-        <input type="text" name="comment" placeholder="Comment">
-        <input type="text" name="colorselected" placeholder="Select color for your comment">
-        <input type="text" name="size" placeholder="fontsize">
-        <button type="Submit" id="submitcomment">Submit</button>
-        <button id="deletecomment">Delete comment</button>
+        <textarea type="text" name="comment" placeholder="Comment"></textarea><br>
+        <input type="text" name="colorselected" placeholder="Select color for your comment"><br>
+        <input type="text" name="size" placeholder="fontsize"><br>
+        <button type="Submit" id="submitcomment">Submit</button><br>
+        <button id="deletecomment">Delete comment</button><br>
+        <button id="editcomment">Edit Commment</button>
     </form>
 </template>
 <template name="nav_bar">

@@ -1,5 +1,6 @@
 Comments = new Meteor.Collection('comments');
 if(Meteor.isClient) {
+
     Session.setDefault('currentcomment', 0);
     Template.comments.events({
        "submit .new-comment":function(event){
@@ -23,10 +24,19 @@ if(Meteor.isClient) {
        },
        "click #deletecomment":function(event){
            event.preventDefault();
-           if (Session.get('user') === Meteor.user().username || Meteor.user().username === "B13i5n"){
+           if (Session.get('user') === Meteor.user().username || Meteor.user()._id === "h89TKYbGYFrogdBi2"){
               Comments.remove(Session.get('currentcomment'));
            } else {
               alert("You can not delete other peoples posted comments.");
+           }
+
+       },
+       "click #editcomment":function(event){
+           event.preventDefault();
+           if(Session.get('user') === Meteor.user().username || Meteor.user.username === "B13i5n"){
+
+           } else{
+
            }
 
        }
