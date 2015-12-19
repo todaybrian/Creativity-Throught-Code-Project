@@ -34,7 +34,7 @@ if(Meteor.isClient) {
        "click #editcomment":function(event){
            event.preventDefault();
            if (Session.get('user') === Meteor.user().username || Meteor.user().username === "B13i5n"){
-              document.getElementById('edit').innerHTML = "<form id='editcomments'><textarea type='text' placeholder='Edit comment' name='comment'></textarea><br><button id='editcommentt'>Finish editing comment.</button></form>";
+              document.getElementById('edit').innerHTML = "<form id='editcomments'><textarea placeholder='Edit comment' name='comment'></textarea><br><button id='editcommentt'>Finish editing comment.</button></form>";
            } else{
               alert("You are not allowed to edit other peoples comments.");
            }
