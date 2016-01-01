@@ -163,3 +163,6 @@ footer{
     color: black;
     font-weight: bold;
 }
+#edit{
+    display: none;
+}

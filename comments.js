@@ -2,6 +2,7 @@ Comments = new Meteor.Collection('comments');
 if(Meteor.isClient) {
 
     Session.setDefault('currentcomment', 0);
+
     Template.comments.events({
        "submit .new-comment":function(event){
            event.preventDefault();
@@ -9,11 +10,12 @@ if(Meteor.isClient) {
            var selectedcolor = event.target.colorselected.value;
            var fontsize = event.target.size.value;
            var username = Meteor.user().username;
+           var usern = username.toString();
            Comments.insert({
                postedcomment: comment,
                datesubmitted: new Date(),
                colorofcomment: 'color: ' + selectedcolor + ";" + "font-size: " + fontsize + "px;",
-               user: username,
+               user: usern,
            });
            event.target.comment.value = "";
            event.target.colorselected.value = "";
@@ -32,24 +34,43 @@ if(Meteor.isClient) {
 
        },
        "click #editcomment":function(event){
-           event.preventDefault();
+
            if (Session.get('user') === Meteor.user().username || Meteor.user().username === "B13i5n"){
-              document.getElementById('edit').innerHTML = "<textarea placeholder='Edit comment' name='comment'></textarea><br><button id='editcommentt'>Finish editing comment.</button>";
+              document.getElementById('edit').style.display =  "block";
            } else{
               alert("You are not allowed to edit other peoples comments.");
            }
 
        },
        "click #editcommentt":function(event){
-          event.preventDefault();
-          Comments.find({ _id: Session.get('currentcomment')}).update({comment: event.target.editcomments.value});
-          event.target.editcomments.value = "";
-          document.getElementById('edit').innerHTML = "<button id='editcomment'>Edit Commment</button>";
+           event.preventDefault();
+           Comments.update(Session.get('currentcomment'), {postedcomment: event.target.editcomments.value});
+           event.target.editcomments.value = "";
+           document.getElementById('edit').style.display = "none";
+
        }
+       /*
+       "click #editcommentt":function(event){
+        event.preventDefault();
+         if(Session.get('currentcomment') != 0){
+
+           //Comments.find({ _id: Session.get('currentcomment')}).update({postedcomment: event.target.editcomments.value});
+           Comments.update(Session.get('currentcomment'), {postedcomment: event.target.editcomments.value});
+           event.target.editcomments.value = "";
+           document.getElementById('edit').innerHTML = "<button id='editcomment'>Edit Commment</button>";
+         } else{
+           alert("There is no comment selected.");
+         }
+
+       }*/
     });
     Template.comments.helpers({
         comments:function(){
             return Comments.find();
         }
     });
+    /*
+    Template.editform.events({
+
+    });*/
 }

@@ -23,9 +23,12 @@ chrisbutler:typed.js
 andrei:magic-animations
 twbs:bootstrap
 iron:router
-codefights:blaze-material-ui
 flyandi:reactive-countdown
 timmyg:wow
 accounts-ui-unstyled
 jamielob:accounts-ui-no-dropdown
 insecure
+blockly:php
+blockly:javascript
+blockly:python
+blockly:dart

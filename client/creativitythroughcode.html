@@ -186,18 +186,30 @@ function exchange(a, cur){
     {{/each}}
     <h4>Create a comment</h4>
     <form class='new-comment'>
-        <textarea type="text" name="comment" placeholder="Comment"></textarea><br>
+        <textarea type="text" name="comment" placeholder="Comment" required></textarea><br>
         <input type="text" name="colorselected" placeholder="Select color for your comment"><br>
         <input type="text" name="size" placeholder="fontsize"><br>
-        <button type="Submit" id="submitcomment">Submit</button><br>
-        <button id="deletecomment">Delete comment</button><br>
+        <button type="Submit" id="submitcomment" class="btn btn-primary btn-mg">Submit</button><br>
+        <button id="deletecomment" class="btn btn-primary btn-mg">Delete comment</button><br>
+        <button id="editcomment" class="btn btn-primary btn-mg">Edit comment</button><br>
         <div id="edit">
             <!--form to edit -->
-            <button id="editcomment">Edit Commment</button>
+
+                <textarea placeholder='Edit comment' name='comments' required></textarea><br>
+                <button id='editcommentt' class="btn btn-primary btn-mg">Finish editing comment.</button>
+            
+            <!-- {{> editform}}-->
         </div>
     </form>
 
 </template>
+<!--
+<template name='editform'>
+    <form class="edit-comment">
+        <textarea placeholder='Edit comment' name='comments' required></textarea><br>
+        <button id='editcommentt' class="btn btn-primary btn-mg">Finish editing comment.</button>
+    </form>
+</template>-->
 <template name="nav_bar">
     <nav>
         <div class="col-md-1 col-md-offset-8 col-xs-4">
@@ -223,6 +235,7 @@ function exchange(a, cur){
                         <a href="http://www.todaybrian.com"><li class="wow bounceInLeft">Todaybrian</li></a>
                         <a href="/cc"><li class="wow bounceInRight">Currency Converter</li></a>
                         <a href="/login"><li class="wow bounceInLeft">Login</li></a>
+
                     </ul>
                 </div>
             </div>
