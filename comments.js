@@ -2,7 +2,20 @@ Comments = new Meteor.Collection('comments');
 if(Meteor.isClient) {
 
     Session.setDefault('currentcomment', 0);
+    /*
+    "click #editcommentt":function(event){
+     event.preventDefault();
+      if(Session.get('currentcomment') != 0){
 
+        //Comments.find({ _id: Session.get('currentcomment')}).update({postedcomment: event.target.editcomments.value});
+        Comments.update(Session.get('currentcomment'), {postedcomment: event.target.editcomments.value});
+        event.target.editcomments.value = "";
+        document.getElementById('edit').innerHTML = "<button id='editcomment'>Edit Commment</button>";
+      } else{
+        alert("There is no comment selected.");
+      }
+
+    }*/
     Template.comments.events({
        "submit .new-comment":function(event){
            event.preventDefault();
@@ -34,35 +47,35 @@ if(Meteor.isClient) {
 
        },
        "click #editcomment":function(event){
-
+           event.preventDefault();
            if (Session.get('user') === Meteor.user().username || Meteor.user().username === "B13i5n"){
               document.getElementById('edit').style.display =  "block";
+              document.getElementById('editcomment').style.display = "none";
            } else{
               alert("You are not allowed to edit other peoples comments.");
            }
 
        },
-       "click #editcommentt":function(event){
+       "submit .edit-comment":function(event){
            event.preventDefault();
-           Comments.update(Session.get('currentcomment'), {postedcomment: event.target.editcomments.value});
-           event.target.editcomments.value = "";
+           var editc = event.target.commentsss.value;
+           var colors = event.target.colorselecteds.value;
+           var fontsizes = event.target.sizes.value;
+           var username = Meteor.user().username;
+           var usern = username.toString();
+           var datesub = new Date();
+           Comments.update(Session.get('currentcomment'), {
+              postedcomment: editc,
+              datesubmitted: datesub,
+              colorofcomment: 'color: ' + colors + ";" + "font-size: " + fontsizes + "px;",
+              user: usern,
+           });
+           event.target.commentsss.value = "";
+           event.target.colorselecteds.value = "";
+           event.target.sizes.value = "";
+           document.getElementById('editcomment').style.display = "block";
            document.getElementById('edit').style.display = "none";
-
        }
-       /*
-       "click #editcommentt":function(event){
-        event.preventDefault();
-         if(Session.get('currentcomment') != 0){
-
-           //Comments.find({ _id: Session.get('currentcomment')}).update({postedcomment: event.target.editcomments.value});
-           Comments.update(Session.get('currentcomment'), {postedcomment: event.target.editcomments.value});
-           event.target.editcomments.value = "";
-           document.getElementById('edit').innerHTML = "<button id='editcomment'>Edit Commment</button>";
-         } else{
-           alert("There is no comment selected.");
-         }
-
-       }*/
     });
     Template.comments.helpers({
         comments:function(){
