@@ -153,10 +153,6 @@ function exchange(a, cur){
     {{> comments}}
 {{> footer}}
 </template>
-<template name="math">
-    {{> nav_bar}}
-    {{> footer}}
-</template>
 <template name="login">
     {{> nav_bar}}
     <div class="row">
@@ -211,6 +207,22 @@ function exchange(a, cur){
         <button id='editcommentt' class="btn btn-primary btn-mg">Finish editing comment.</button>
     </form>
 </template>-->
+<template name="math_game">
+  {{> nav_bar}}
+      <form class="setnum" id="noseef">
+          <p>Set numbers to add each other. Only whole numbers.</p>
+          <input type="text" name="namas" placeholder="The lowest number you want to add with"><br>
+          <input type="text" name="nambs" placeholder="The highest number you want to add with"><br>
+          <button type="Submit" id="setnume" class="btn btn-primary btn-mg">Set numbers</button>
+      </form>
+
+      <form class="maths" id="nosees">
+        <p id="Q"></p>
+          <input type="text" name="answer" placeholder="Answer"><br>
+          <button type="Submit" id="math_games" class="btn btn-primary btn-mg">Submit Answer</button>
+      </form>
+  {{> footer}}
+</template>
 <template name="nav_bar">
     <nav>
         <div class="col-md-1 col-md-offset-8 col-xs-4">

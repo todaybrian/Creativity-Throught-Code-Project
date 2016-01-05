@@ -23,8 +23,14 @@ Router.route('/cc', {
     }
 });
 Router.route('/math',{
-    template: 'math',
-    title: 'B13i5n website - math'
+    onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.render('math_game');
+        } else{
+            this.render('login');
+        }
+    }
 });
 Router.route('/login',{
     template: 'login',
