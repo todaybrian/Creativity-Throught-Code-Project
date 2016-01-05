@@ -211,14 +211,15 @@ function exchange(a, cur){
   {{> nav_bar}}
       <form class="setnum" id="noseef">
           <p>Set numbers to add each other. Only whole numbers.</p>
-          <input type="text" name="namas" placeholder="The lowest number you want to add with"><br>
-          <input type="text" name="nambs" placeholder="The highest number you want to add with"><br>
+          <input type="number" name="namas" placeholder="The lowest number you want to add with"><br>
+          <input type="number" name="nambs" placeholder="The highest number you want to add with"><br>
           <button type="Submit" id="setnume" class="btn btn-primary btn-mg">Set numbers</button>
       </form>
 
       <form class="maths" id="nosees">
+        <p id="rightwrong"></p>
         <p id="Q"></p>
-          <input type="text" name="answer" placeholder="Answer"><br>
+          <input type="number" name="answer" placeholder="Answer"><br>
           <button type="Submit" id="math_games" class="btn btn-primary btn-mg">Submit Answer</button>
       </form>
   {{> footer}}

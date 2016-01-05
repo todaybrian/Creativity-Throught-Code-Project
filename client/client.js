@@ -1,16 +1,16 @@
 Awesome = new Meteor.Collection('awesome');
 
 if (Meteor.isClient) {
-    
+
     Session.setDefault('exchangedPrinciple', 0);
     Session.setDefault('finalCurrency', 0);
-    
+
     Session.setDefault('val1', 0);
     Session.setDefault('val2', 0);
     Session.setDefault('score', 0);
     Session.setDefault();
     Template.about.rendered = new WOW().init();
-    
+
     Template.cc.events({
         'submit .convert':function(event) {
             event.preventDefault();
@@ -18,7 +18,7 @@ if (Meteor.isClient) {
             var ctous = 0.75;
             var utoc = 1.33;
             var exchangee = [ctous, utoc];
-            
+
             //Get values from form.
             var principleValue = event.target.principle.value;
             var rateSelected = event.target.type.value;
@@ -37,18 +37,19 @@ if (Meteor.isClient) {
             } else {
                 return temp;
             }
-            
+
         }
     });
+    /*
     Template.math.helpers({
         assignValues:function(){
            Session.set('val1', (Math.random() * 10) + 1);
            Session.set('val1', (Math.random() * 10) + 1);
-       }, 
+       },
         returnValues:function(){
            return (Session.get('val1'),Session.get('val2'));
        }
-    });
+    });*/
     Template.gallery.helpers({
         awesome: function(){
             return Awesome.find();
