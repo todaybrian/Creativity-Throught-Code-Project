@@ -15,8 +15,8 @@ if (Meteor.isClient) {
         'submit .convert':function(event) {
             event.preventDefault();
             //Exchange rates
-            var ctous = 0.75;
-            var utoc = 1.33;
+            var ctous = 0.710065;
+            var utoc = 1.40832;
             var exchangee = [ctous, utoc];
 
             //Get values from form.
@@ -40,16 +40,7 @@ if (Meteor.isClient) {
 
         }
     });
-    /*
-    Template.math.helpers({
-        assignValues:function(){
-           Session.set('val1', (Math.random() * 10) + 1);
-           Session.set('val1', (Math.random() * 10) + 1);
-       },
-        returnValues:function(){
-           return (Session.get('val1'),Session.get('val2'));
-       }
-    });*/
+    
     Template.gallery.helpers({
         awesome: function(){
             return Awesome.find();

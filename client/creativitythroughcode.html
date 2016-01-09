@@ -5,15 +5,13 @@
 </head>
 
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
+
 
 
 
 <template name="about">
     <script type="text/javascript">
+    /*
         var yay = function(a, b) {
             return a + b;
         }
@@ -45,6 +43,7 @@
             console.log(str)
         }
         console.log(Meteor.user());
+        */
     </script>
     {{> nav_bar}}
   <body>
@@ -190,7 +189,7 @@ function exchange(a, cur){
         <button id="editcomment" class="btn btn-primary btn-mg">Edit comment</button><br>
 
 
-            <!-- {{> editform}}-->
+
 
     </form>
     <form class="edit-comment"  id="edit">
@@ -200,13 +199,7 @@ function exchange(a, cur){
         <button type="Submit" id="editcommentt" class="btn btn-primary btn-mg">Finish editing comment.</button>
     </form>
 </template>
-<!--
-<template name='editform'>
-    <form class="edit-comment">
-        <textarea placeholder='Edit comment' name='comments' required></textarea><br>
-        <button id='editcommentt' class="btn btn-primary btn-mg">Finish editing comment.</button>
-    </form>
-</template>-->
+
 <template name="math_game">
   {{> nav_bar}}
       <form class="setnum" id="noseef">
@@ -221,7 +214,10 @@ function exchange(a, cur){
         <p id="Q"></p>
           <input type="number" name="answer" placeholder="Answer"><br>
           <button type="Submit" id="math_games" class="btn btn-primary btn-mg">Submit Answer</button>
+          <button id="Finish" class="btn btn-primary btn-mg">Finish.</button>
       </form>
+      <div id="scoreteller">
+      </div>
   {{> footer}}
 </template>
 <template name="nav_bar">
@@ -249,6 +245,7 @@ function exchange(a, cur){
                         <a href="http://www.todaybrian.com"><li class="wow bounceInLeft">Todaybrian</li></a>
                         <a href="/cc"><li class="wow bounceInRight">Currency Converter</li></a>
                         <a href="/login"><li class="wow bounceInLeft">Login</li></a>
+                        <a href="/math"><li class="wow bounceInRight">Math Game</li></a>
 
                     </ul>
                 </div>
