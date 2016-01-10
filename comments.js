@@ -2,7 +2,7 @@ Comments = new Meteor.Collection('comments');
 if(Meteor.isClient) {
 
     Session.setDefault('currentcomment', 0);
-    
+
     Template.comments.events({
        "submit .new-comment":function(event){
            event.preventDefault();
@@ -70,8 +70,5 @@ if(Meteor.isClient) {
             return Comments.find();
         }
     });
-    /*
-    Template.editform.events({
 
-    });*/
 }

@@ -58,7 +58,7 @@ if(Meteor.isClient){
                 document.getElementById("rightwrong").innerHTML = "You are wrong. The asnwer is not even a number!";
             }
             var a = Math.floor(Math.random()*(Session.get('range2')-Session.get('range1')+1)+Session.get('range1'));
-            var b = Math.floor(Math.random()*(Session.get('range2')-Session.get('range1')+1)+Session.get('range1'));
+            var b = Math.floor(Math.random()*(Session.get('range2')-Session.get('range1')+1)+num1s);
             Session.set("num1", a);
             Session.set("num2", b);
             document.getElementById("Q").innerHTML = "What is " + (Session.get("num1")).toString() + " + " + (Session.get("num2")).toString() + "?";
